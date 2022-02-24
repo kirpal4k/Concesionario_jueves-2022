@@ -260,11 +260,12 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout14">
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/btregresar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button" />
+            android:textSize="25dp"
+            android:text="Regreasar" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
