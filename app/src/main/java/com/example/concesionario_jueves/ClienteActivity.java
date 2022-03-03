@@ -3,6 +3,7 @@ package com.example.concesionario_jueves;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -135,6 +136,15 @@ public class ClienteActivity extends AppCompatActivity {
 
         }
 
+        }
+    public void Registrarse(View view){
+        Intent intregistrarse=new Intent(this,ClienteActivity.class);
+        startActivity(intregistrarse);
+    }
+
+        public void Regresar (View view){
+            Intent intmain=new Intent(this,MainActivity.class);
+            startActivity(intmain);
         }
 
 

@@ -28,6 +28,16 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void Registrarse(View view){
+        Intent intregistrarse=new Intent(this,ClienteActivity.class);
+        startActivity(intregistrarse);
+    }
+    public void Cancelar(View view){
+
+
+
+        limpiar_campos();
+    }
+    public void Registrarse(View view){
 
         Intent intregistrarse=new Intent(this,ClienteActivity.class);
         startActivity();
