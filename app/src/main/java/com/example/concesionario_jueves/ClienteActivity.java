@@ -2,6 +2,8 @@ package com.example.concesionario_jueves;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -52,13 +54,21 @@ public class ClienteActivity extends AppCompatActivity {
         }
         else{
             if (clave1.equals(clave2)){
-                Toast.makeText(this, "Las claves no coninsiden", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Las claves no coinciden", Toast.LENGTH_SHORT).show();
                 jetclave1.requestFocus();
 
             }
 
             else {
                 Conexion_concesionario admin=new Conexion_concesionario(this,"concesionario.bd",null,1);
+                SQLiteDatabase db=admin.getReadableDatabase();
+                ContentValues dato=new ContentValues();
+                dato.put("Identificacion",identificacion);
+                dato.put("nombre",nombre);
+                dato.put("usuario",usuario);
+                dato.put("clave",clave2);
+
+                db.close();
             }
 
         }
